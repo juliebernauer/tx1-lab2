@@ -42,12 +42,12 @@ Let's check our version of caffe is working by reproing the [whitepaper](http://
 ### Setting clocks
 First, check the clocks on the TX1:
 ```
-sudo bash jetson_max_l4t.sh --show
+sudo bash ~/jetson_max_l4t.sh --show
 ```
 
 Let's set maximum clocks on the TX1 for best performance:
 ```
-sudo bash jetson_max_l4t.sh
+sudo bash ~/jetson_max_l4t.sh
 ```
 The fan should start.
 
