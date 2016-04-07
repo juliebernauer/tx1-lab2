@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libcnmem.so.1 -o libcnmem.so.1.0.0 CMakeFiles/cnmem.dir/src/cnmem.cpp.o /usr/local/cuda-7.0/lib/libcudart.so -Wl,-rpath,/usr/local/cuda-7.0/lib: 
