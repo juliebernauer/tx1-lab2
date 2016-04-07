@@ -1,0 +1,48 @@
+#ifdef USE_CUDNN
+#include <algorithm>
+#include <cfloat>
+#include <vector>
+
+#include "thrust/device_vector.h"
+
+#include "caffe/layer.hpp"
+#include "caffe/util/math_functions.hpp"
+#include "caffe/vision_layers.hpp"
+
+namespace caffe {
+
+template <typename Dtype, typename Mtype>
+void CuDNNSoftmaxLayer<Dtype,Mtype>::LayerSetUp(const vector<Blob<Dtype,Mtype>*>& bottom,
+      const vector<Blob<Dtype,Mtype>*>& top) {
+  SoftmaxLayer<Dtype,Mtype>::LayerSetUp(bottom, top);
+  // Initialize CUDNN.
+  cudnn::createTensor4dDesc<Dtype>(&bottom_desc_);
+  cudnn::createTensor4dDesc<Dtype>(&top_desc_);
+  handles_setup_ = true;
+}
+
+template <typename Dtype, typename Mtype>
+void CuDNNSoftmaxLayer<Dtype,Mtype>::Reshape(const vector<Blob<Dtype,Mtype>*>& bottom,
+      const vector<Blob<Dtype,Mtype>*>& top) {
+  SoftmaxLayer<Dtype,Mtype>::Reshape(bottom, top);
+  int N = this->outer_num_;
+  int K = bottom[0]->shape(this->softmax_axis_);
+  int H = this->inner_num_;
+  int W = 1;
+  cudnn::setTensor4dDesc<Dtype>(&bottom_desc_, N, K, H, W);
+  cudnn::setTensor4dDesc<Dtype>(&top_desc_, N, K, H, W);
+}
+
+template <typename Dtype, typename Mtype>
+CuDNNSoftmaxLayer<Dtype,Mtype>::~CuDNNSoftmaxLayer() {
+  // Check that handles have been setup before destroying.
+  if (!handles_setup_) { return; }
+
+  cudnnDestroyTensorDescriptor(bottom_desc_);
+  cudnnDestroyTensorDescriptor(top_desc_);
+}
+
+INSTANTIATE_CLASS(CuDNNSoftmaxLayer);
+
+}  // namespace caffe
+#endif
