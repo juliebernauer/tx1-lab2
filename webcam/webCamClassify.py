@@ -24,13 +24,13 @@ def main(argv):
 	parser.add_argument(
 	    "--model_def",
 	    default=os.path.join(pycaffe_dir,
-	            "/Users/jbarker/caffe/models/bvlc_reference_caffenet/deploy.prototxt"),
+	            "/home/ubuntu/caffe/models/bvlc_reference_caffenet/deploy.prototxt"),
 	    help="Model definition file."
 	)
 	parser.add_argument(
 	    "--pretrained_model",
 	    default=os.path.join(pycaffe_dir,
-	            "/Users/jbarker/caffe/models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel"),
+	            "/home/ubuntu/caffe/models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel"),
 	    help="Trained model weights file."
 	)
 	parser.add_argument(
@@ -42,7 +42,7 @@ def main(argv):
 	parser.add_argument(
 	    "--mean_file",
 	    default=os.path.join(pycaffe_dir,
-	                         '/Users/jbarker/caffe/data/ilsvrc12/mean.npy'),
+	                         '/home/ubuntu/caffe/data/ilsvrc12/mean.npy'),
 	    help="Data set image mean of [Channels x Height x Width] dimensions " +
 	         "(numpy array). Set to '' for no mean subtraction."
 	)
@@ -62,7 +62,7 @@ def main(argv):
 	parser.add_argument(
 	    "--labels_file",
 	    default=os.path.join(pycaffe_dir,
-	            "/Users/jbarker/caffe/data/ilsvrc12/synset_words.txt"),
+	            "/home/ubuntu/caffe/data/ilsvrc12/synset_words.txt"),
 	    help="Readable label definition file."
 	)
 	args = parser.parse_args()
