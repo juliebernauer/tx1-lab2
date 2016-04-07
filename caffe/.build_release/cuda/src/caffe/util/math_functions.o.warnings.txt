@@ -1,0 +1,40 @@
+src/caffe/util/math_functions.cu(284): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_dot_kernel(int, const Dtype *, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(321): here
+
+src/caffe/util/math_functions.cu(352): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_asum_kernel(int, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(387): here
+
+src/caffe/util/math_functions.cu(284): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_dot_kernel(int, const Dtype *, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(321): here
+
+src/caffe/util/math_functions.cu(352): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_asum_kernel(int, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(387): here
+
+src/caffe/util/math_functions.cu(284): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_dot_kernel(int, const Dtype *, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(321): here
+
+src/caffe/util/math_functions.cu(352): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_asum_kernel(int, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(387): here
+
+src/caffe/util/math_functions.cu(284): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_dot_kernel(int, const Dtype *, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(321): here
+
+src/caffe/util/math_functions.cu(352): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_asum_kernel(int, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(387): here
+
+src/caffe/util/math_functions.cu(284): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_dot_kernel(int, const Dtype *, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(321): here
+
+src/caffe/util/math_functions.cu(352): warning: __shared__ memory variable with non-empty constructor or destructor (potential race between threads)
+          detected during instantiation of "void caffe::gpu_asum_kernel(int, const Dtype *, Mtype *) [with Dtype=caffe::float16, Mtype=caffe::float16]" 
+(387): here
+
