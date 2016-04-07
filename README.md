@@ -21,7 +21,7 @@ sudo apt-get install cmake git aptitude screen g++ libboost-all-dev \
 ### Caffe
 We will use the experimental branch of caffe used in the [whitepaper](http://www.nvidia.com/content/tegra/embedded-systems/pdf/jetson_tx1_whitepaper.pdf).
 
-It was set up and provided to you in the gitlab material that you should have vailable in: /home/ubuntu/tx1-lab2/caffe/
+It was set up and provided to you in the github material that you should have it available in: /home/ubuntu/tx1-lab2/caffe/
 
 Set up a few environment variables
 ```
@@ -72,7 +72,7 @@ python tx1-lab2/digits_connect/download-digits-model.py \
   -n <your amazon instance>.compute-1.amazonaws.com -p 5000 deploy_files/my_model.tar.gz
 ```
 
-Untar
+Extract files from the archive:
 ```
 cd deploy_files
 tar xzvf my_model.tar.gz
