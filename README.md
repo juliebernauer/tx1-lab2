@@ -23,6 +23,12 @@ We will use the experimental branch of caffe used in the [whitepaper](http://www
 
 It was set up and provided to you in the github material that you should have it available in: /home/ubuntu/tx1-lab2/caffe/
 
+First, pull the latest changes from GitHub:
+```
+cd ~/tx1-lab2
+git pull
+```
+
 Set up a few environment variables
 ```
 echo 'export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/ubuntu/tx1-lab2/caffe/3rdparty/cnmem/build:/home/ubuntu/tx1-lab2/caffe/distribute/lib' >> ~/.bashrc
